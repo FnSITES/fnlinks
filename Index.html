@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>FN LINKS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <button class="toggle-mode" onclick="toggleMode()" title="Alternar Modo Claro/Escuro">🌙/☀️</button>
+  <div id="title" title="Clique 3x rápido!">FN LINKS</div>
+  <div id="subtitle"></div>
+  <div id="clock"></div>
+  <div id="date"></div>
+</header>
+
+<nav>
+  <button id="btn-jogos" class="active" onclick="showSection('jogos', this)">Jogos</button>
+  <button id="btn-downloads" onclick="showSection('downloads', this)">Downloads</button>
+</nav>
+
+<section id="jogos" class="section active">
+  <h2>Jogos Populares</h2>
+  <input type="text" id="searchBox" placeholder="Buscar jogo..." oninput="filtrarJogos()" />
+
+  <div class="game" data-name="minecraft">
+    <h3 onclick="showSection('downloads', document.getElementById('btn-downloads'))" title="Clique para ir para Downloads">Minecraft 1.21.80</h3>
+    <img src="https://cdn.mos.cms.futurecdn.net/ZgRy3ZAH7EavmGMW3DKxWH.jpg" alt="Minecraft" draggable="false" />
+  </div>
+
+  <div class="game" data-name="terraria">
+    <h3 onclick="showSection('downloads', document.getElementById('btn-downloads'))" title="Clique para ir para Downloads">Terraria Atualizada</h3>
+    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/105600/header.jpg" alt="Terraria" draggable="false" />
+  </div>
+</section>
+
+<section id="downloads" class="section">
+  <h2>Downloads</h2>
+  <a class="link-button rgb" href="https://mcpedl.org/minecraft-pe-1-21-92-apk/" target="_blank" rel="noopener noreferrer" title="Baixar Minecraft" onclick="confete()">Baixar Minecraft</a>
+  <a class="link-button rgb" href="https://apkvision.org/games/role-playing/terraria-apk-51597/" target="_blank" rel="noopener noreferrer" title="Baixar Terraria" onclick="confete()">Baixar Terraria</a>
+  <a class="link-button rgb" href="https://youtube.com/@goldynb?si=4YnxiBdDZjSUiaFC" target="_blank" rel="noopener noreferrer" title="YouTube - GoldyNB">YouTube - GoldyNB</a>
+</section>
+
+<button id="backToTop" title="Voltar ao topo" onclick="scrollToTop()">⬆️</button>
+
+<script src="script.js"></script>
+</body>
+</html>
